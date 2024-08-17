@@ -9,6 +9,7 @@ function Navbar() {
         justifyContent: 'space-between', 
         width: '100%',
         boxSizing: 'border-box',
+        backgroundColor: '#f0f0f0',
         maxWidth: '100%',
   margin: 0,
   padding: 0,
