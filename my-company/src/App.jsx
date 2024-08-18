@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' ,margin:'auto'}}>
+      {/* <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}> */}
       <Routes>
         <Route   
  path="/" element={<Home />} />
@@ -20,7 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact   
  />} />
       </Routes>
-      </div>
+      {/* </div> */}
     </BrowserRouter>
   );
 }

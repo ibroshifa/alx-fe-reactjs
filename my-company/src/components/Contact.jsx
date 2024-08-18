@@ -17,7 +17,7 @@ function Contact() {
   };
 
   return (
-    <div style={{ padding: '40px',margin:'auto' }}>
+    <div style={{ padding: '40px',margin:'auto',maxWidth:'500px' }}>
       <h1 style={{ fontSize: '30px', color: '#333' }}>Contact Us</h1>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
          <input

@@ -1,6 +1,6 @@
 function Services() {
     return (
-      <div style={{ padding: '20px' ,margin:'auto'}}>
+      <div style={{ padding: '20px' ,marginInline:'15%'}}>
         <h1>Our Services</h1>
         <ul>
           <li>Technology Consulting</li>
