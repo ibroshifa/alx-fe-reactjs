@@ -35,7 +35,7 @@ const HomePage = () => {
         <div className="p-4">
           <h3 className="text-lg font-medium mb-2">{recipe.title}</h3>
           <p className="text-gray-700">{recipe.summary}</p>
-          <a href={`/recipes/${recipe.id}`} className="text-indigo-500 hover:text-indigo-700">
+          <a href={`/recipe/${recipe.id}`} className="text-indigo-500 hover:text-indigo-700">
             View Recipe
           </a>
         </div>
