@@ -1,6 +1,6 @@
 const RecipeCard = ({ recipe }) => {
     return (
-      <div className="shadow-md rounded-lg overflow-hidden">
+      <div className="shadow hover:shadow-lg rounded-lg overflow-hidden">
         <img src={recipe.image} alt={recipe.title} className="w-full h-40 object-cover" />
         <div className="p-4">
           <h3 className="text-lg font-medium mb-2">{recipe.title}</h3>
