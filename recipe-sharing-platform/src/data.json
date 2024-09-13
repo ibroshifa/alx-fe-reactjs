@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://www.modernhoney.com/wp-content/uploads/2023/02/Spaghetti-Carbonara-3-crop-720x763.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://cdn.sunbasket.com/17f02708-f844-4158-95cf-defd86c95f0b.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Pad Thai",
+    "summary": "A stir-fried rice noodle dish with shrimp, chicken, eggs, peanuts, and a tangy sauce.",
+    "image": "https://www.foodandwine.com/thmb/fVg4StV4O2ZRK3QHCGo4qpAZUzw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Shrimp-Pad-Thai-FT-RECIPE0324-3132ca704bc0457e836127dbda403368.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Beef Tacos",
+    "summary": "Spiced ground beef, fresh toppings, all wrapped up in a warm corn tortilla. A classic Tex-Mex dish!",
+    "image": "https://carlsbadcravings.com/wp-content/uploads/2022/02/Shredded-Beef-Tacos-main.jpg"
+  }
+]
