@@ -16,8 +16,13 @@ const HomePage = () => {
    
     return (
         <div className="container mx-auto px-4 pt-16">
-          <h1 className="text-3xl font-bold mb-8">Recipes</h1>
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+         <div className='flex flex-row'> <h1 className="text-3xl font-bold mb-8">Recipes</h1>
+         
+<Link to={`/add`} className="px-5 mx-10 h-10 flex flex-row items-center rounded-xl bg-orange-500 px-4 py-3 text-base font-medium text-white transition duration-200 hover:bg-orange-600 active:bg-orange-700 dark:bg-orange-400 dark:text-white dark:hover:bg-orange-300 dark:active:bg-orange-200">
+          Add Recipe
+          </Link>
+          </div>
+          <div  className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {recipes.map((recipe) => (
               <RecipeCard key={recipe.id} recipe={recipe}   />
             ))}
