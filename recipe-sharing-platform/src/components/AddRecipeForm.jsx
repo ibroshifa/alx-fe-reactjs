@@ -4,6 +4,7 @@ const AddRecipeForm = () => {
   const [title, setTitle] = useState('');
   const [ingredientsList, setIngredientsList] = useState([]);
   const [steps, setSteps] = useState([]);
+  const [errors, setErrors] = useState({});
 
   const handleIngredientChange = (e) => {
     const newIngredients = e.target.value.split('\n'); // Split by newline for multiple ingredients
@@ -19,11 +20,16 @@ const AddRecipeForm = () => {
     e.preventDefault();
 
    
-// Validate form data here
-if (!title || !ingredients || !instructions) {
-    alert('Please fill in all fields.');
-    return;
-  }
+
+     // validate
+     const newErrors = {};
+     if (!username) newErrors.username = 'Username is required';
+     if (!email) newErrors.email = 'Email is required';
+     if (!password) newErrors.password = 'Password is required';   
+ 
+ 
+     setErrors(newErrors);
+  
 
   const newRecipe = {
     title,
