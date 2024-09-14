@@ -80,10 +80,10 @@ if (!title || !ingredients || !instructions) {
         required
       />
       <label htmlFor="ingredients" className="block text-gray-700 font-bold mb-2">
-            Instructions
+            Steps
           </label>
         <textarea
-        id="instructions"
+        id="steps"
         rows="4" className="w-full block p-2.5  text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
         placeholder="Write your thoughts here..."
         value={instructionsList.join('\n')}
