@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const AddRecipeForm = () => {
   const [title, setTitle] = useState('');
   const [ingredientsList, setIngredientsList] = useState([]);
-  const [instructionsList, setInstructionsList] = useState([]);
+  const [steps, setSteps] = useState([]);
 
   const handleIngredientChange = (e) => {
     const newIngredients = e.target.value.split('\n'); // Split by newline for multiple ingredients
@@ -12,7 +12,7 @@ const AddRecipeForm = () => {
 
   const handleInstructionChange = (e) => {
     const newInstructions = e.target.value.split('\n');
-    setInstructionsList(newInstructions);
+    setSteps(newInstructions);
   };
 
   const handleSubmit = (e) => {
@@ -28,7 +28,7 @@ if (!title || !ingredients || !instructions) {
   const newRecipe = {
     title,
     ingredients: ingredientsList,
-    instructions: instructionsList
+    instructions: steps
   };
 
   
@@ -86,7 +86,7 @@ if (!title || !ingredients || !instructions) {
         id="steps"
         rows="4" className="w-full block p-2.5  text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
         placeholder="Write your thoughts here..."
-        value={instructionsList.join('\n')}
+        value={steps.join('\n')}
         onChange={handleInstructionChange}
         required
       />
