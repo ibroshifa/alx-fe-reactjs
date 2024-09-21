@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const GITHUB_API_KEY =  environmentVariable.env.REACT_APP_GITHUB_API_KEY;
-const API_URL = 'https://api.github.com/search/users';
+const API_URL = 'https://api.github.com/search/users?q';
 
 export const fetchUserData = async (username) => {
     try {
@@ -25,7 +25,7 @@ export const fetchUserData = async (username) => {
 
 
     try {
-      const response = await axios.get(`${API_URL}?q=${query}`);
+      const response = await axios.get(`${API_URL}=${query}`);
       
       return response.data.items;
     } catch (error) {
