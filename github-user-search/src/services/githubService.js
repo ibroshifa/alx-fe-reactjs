@@ -1,5 +1,6 @@
 import axios from 'axios';
-const GITHUB_API_KEY = process.env.REACT_APP_GITHUB_API_KEY;
+
+// const GITHUB_API_KEY =  environmentVariable.env.REACT_APP_GITHUB_API_KEY;
 const API_URL = 'https://api.github.com/users/';
 
 export const fetchUserData = async (username) => {

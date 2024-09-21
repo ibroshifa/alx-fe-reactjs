@@ -35,14 +35,16 @@ const Search = () => {
       </form>
 
       {loading && <p>Loading...</p>}
+      {/* "Looks like we cant find the user" */}
       {error && <p>Looks like we cant find the user</p>}
+      {/* "login" */}
       {userData && (
         <div>
           <img src={userData.avatar_url} alt={userData.name} width="100" />
           <h3>{userData.name}</h3>
           <p>{userData.bio}</p>
           <a href={userData.html_url} target="_blank" rel="noopener noreferrer">
-          login
+          View Profile
           </a>
         </div>
       )}
