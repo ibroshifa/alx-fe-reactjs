@@ -10,17 +10,25 @@ const HomePage = ()=>{
     const [questionCount, setQuestionCount] = useState(5);
     const [categories, setCategories] = useState([]);
     const navigate = useNavigate();
+   
     const handleNavigate = () => {
         navigate(`/quiz?category=${selectedCategory}&difficulty=${difficulty}&count=${questionCount}&categoryName=${categoryName}`);
       };
      // Fetching categories from the API
   useEffect(() => {
+    
     const fetchCategories = async () => {
+      try {
       const response = await axios.get('https://opentdb.com/api_category.php');
       setCategories(response.data.trivia_categories);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      alert("An error occurred while fetching quiz categories. Please try again.");
+    }
     };
     fetchCategories();
-  }, []); 
+  
+     }, []); 
 return (
     <>
 {/* Quiz Configuration */}

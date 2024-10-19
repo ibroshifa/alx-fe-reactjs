@@ -16,7 +16,7 @@ const QuizPage = ()=>{
     const [quizCompleted, setQuizCompleted] = useState(false);
     
 
-    const location = useLocation();
+  const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   
   const selectedCategory = searchParams.get('category');
@@ -39,14 +39,22 @@ const QuizPage = ()=>{
         }
 
         setQuestions(response.data.results);
-        calculatePerformance(response.data.results)
+        // calculatePerformance(response.data.results)
         setCurrentQuestionIndex(0); // Reset to the first question
         setScore(0); // Reset score when a new quiz starts
         setShowFeedback(false); // Hide feedback for new quiz
         setIsAnswerCorrect(null); // Reset answer correctness
       } catch (error) {
-        console.error("Error fetching data:", error);
-        alert("An error occurred while fetching quiz questions. Please try again.");
+        if (axios.isAxiosError(error)) {
+          console.error('Axios Error:', error.message);
+          if(error.response?.status!=429){  /// ignore 429 (which is too many request it didn't prevent the get request)
+            alert(`Request failed: ${error.response?.status} ${error.response?.statusText}`);
+          }
+          
+        } else {
+          console.error('Unexpected Error:', error);
+          alert('An unexpected error occurred. Please try again.');
+        }
       }
       };
       fetchQuizQuestions()

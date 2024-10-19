@@ -28,15 +28,15 @@ const QuizHistory = () => {
   
 
   return (
-    <div className="w-3/4 mt-20  bg-white h-[35rem]">
+    <div className="w-full mt-14  bg-white  md:px-20 ">
      
-  <div className="flex items-center justify-between mb-4 mx-20 mt-8">
+  <div className="flex items-center justify-between mb-4 mx-4 md:mx-8 lg:mx-20  mt-8 ">
     <h2 className="text-2xl font-semibold">Quiz History</h2>
     <p className="text-lg">Average Score: {averageScore}</p>
     <p className="text-lg">Best Score: {bestScore}</p>
   </div>
       {quizHistory.length > 0 ? (
-        <table className="table-auto w-5/6 bg-white shadow-md rounded mx-auto">
+        <table className="table-auto w-3/4 bg-white shadow-md rounded mx-auto mb-20">
           <thead>
             <tr className="bg-gray-200">
              <th className=" py-2 text-left">No</th>

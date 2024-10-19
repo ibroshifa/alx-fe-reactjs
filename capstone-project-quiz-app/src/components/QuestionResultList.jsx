@@ -1,10 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 const QuestionResultList = ({ questions, userAnswers, results, score,onRetakeExam  }) => {
-  const navigate = useNavigate();
-  const handleNavigate = () => {
-      navigate(`/quiz?category=${selectedCategory}&difficulty=${difficulty}&count=${questionCount}&categoryName=${categoryName}`);
-    };
+  // const navigate = useNavigate();
+  // const handleNavigate = () => {
+  //     navigate(`/quiz?category=${selectedCategory}&difficulty=${difficulty}&count=${questionCount}&categoryName=${categoryName}`);
+  //   };
   return (
     <div className="mt-12 bg-white p-6 rounded shadow-md w-3/4 mx-auto ">
       {/* Score Header */}
