@@ -17,6 +17,7 @@ const SearchPage = () => {
         setLoading(true);
         setError('');
         try {
+            // fetch all questions because the triva didnt have api for searching
           const response = await axios.get(
             `https://opentdb.com/api.php?amount=4000`
           );

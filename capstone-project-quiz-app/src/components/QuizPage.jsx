@@ -46,13 +46,11 @@ const QuizPage = ()=>{
         setIsAnswerCorrect(null); // Reset answer correctness
       } catch (error) {
         if (axios.isAxiosError(error)) {
-          console.error('Axios Error:', error.message);
           if(error.response?.status!=429){  /// ignore 429 (which is too many request it didn't prevent the get request)
             alert(`Request failed: ${error.response?.status} ${error.response?.statusText}`);
           }
           
         } else {
-          console.error('Unexpected Error:', error);
           alert('An unexpected error occurred. Please try again.');
         }
       }

@@ -15,6 +15,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink 
           to="/quizHistory" 
+           //an arrow function Dynamically applies classes based on the active state of the link
           className={({ isActive }) => 
             `text-white text-lg font-semibold hover:text-blue-300 flex items-center space-x-2 ${isActive ? 'border-b-2 border-white' : ''}`
           }
